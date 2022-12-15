@@ -1,0 +1,99 @@
+
+
+
+@import './bootstrap.scss';
+
+
+/*****************TYPOS********************/
+
+@font-face {
+    font-family: 'futura';
+    src: url('../fonts/futura-pt-extrabold.otf');
+}
+
+@font-face {
+    font-family: 'oliver';
+    src: url('../fonts/Oliver-ehco.otf');
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url('../fonts/Raleway-VariableFont_wght.ttf');
+}
+
+
+/********************GLOBAL*********************/
+
+body{
+    height: 100vh;
+    
+    //@extend %flex-center;
+}
+
+
+main{
+    height: 100vh;
+}
+
+
+
+
+
+
+/*********************MENU**************************/
+
+.navbar{
+    background-color: $vertprincipal;
+    padding-left: 9%;
+    padding-right: 9%;
+}
+
+@media (min-width: 1400px) {
+    .navbar{
+        background-color: $vertprincipal;
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+}
+
+
+.navbar-collapse{
+    @extend %flex-center;
+}
+
+.navbar-nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width:100%;
+}
+
+.nav-link{
+    color: $blanc;
+    font-size: $fontsizemenu;
+    font-weight: bold;
+    font-family: futura ;
+}
+
+.nav-link:hover, .nav-link:focus, .dropdown-item:hover, .dropdown-item:focus{
+    color: $orange; /*vertclair*/
+}
+
+.dropdown-menu{
+    border-radius: 0%;
+    border: none;
+    //background-color: red;
+}
+
+.dropdown-item{
+    color: $vertprincipal;
+    font-size: $fontsizemenu;
+    font-weight: bold;
+    font-family: futura;
+}
+
+
+@media (min-width: 992px) {
+
+
+}

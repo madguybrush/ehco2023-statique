@@ -92,8 +92,91 @@ main{
     font-family: futura;
 }
 
-
-@media (min-width: 992px) {
-
-
+.navbar-toggler{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    transition: .5s ease-in-out;
+    border: 0;
 }
+
+.navbar-toggler, 
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+    border: 0;
+    position: relative;
+}
+
+.navbar-toggler span{
+    margin: 0;
+    padding: 0;
+}
+
+.toggler-icon {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: $blanc;
+    border-radius: 1px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+}
+
+.middle-bar {
+    margin-top: 0px;
+    //margin: 5px auto;
+}
+
+
+
+.navbar-toggler.collapsed .top-bar {
+    position: absolute;
+    top: 0px;
+    transform: rotate(0deg);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+    position: absolute;
+    top: 10px;
+    filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+    position: absolute;
+    top: 20px;
+    transform: rotate(0deg);
+}
+
+/* when navigation is clicked */
+
+.navbar-toggler .top-bar {
+    transform: rotate(135deg);
+    //transform: rotate(-45deg) translate(-5px, 5px);
+    background-color: $orange;
+}
+
+.navbar-toggler .middle-bar {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+    transform: rotate(-135deg);
+    //transform: rotate(45deg) translate(-5px, 5px);
+    background-color: $orange;
+}
+
+.navbar-toggler.collapsed .toggler-icon {
+    background-color: $blanc;
+    //background: linear-gradient( 263deg, $blanc 0%, $orangeclair 100% );
+}
+
+
+

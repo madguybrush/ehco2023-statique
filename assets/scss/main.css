@@ -6729,12 +6729,6 @@ textarea.form-control-lg {
   overflow-y: auto;
 }
 
-.navbar-collapse {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .placeholder {
   display: inline-block;
   min-height: 1em;
@@ -12181,13 +12175,29 @@ textarea.form-control-lg {
   font-family: "raleway";
   src: url("../fonts/Raleway-VariableFont_wght.ttf");
 }
-/********************GLOBAL*********************/
-body {
-  height: 100vh;
+/*********************HEADER**************************/
+header {
+  background-color: #EDFFAF;
 }
 
-main {
-  height: 100vh;
+header h1, header .h1 {
+  color: #9DC41A;
+  margin-bottom: 0;
+  font-size: 1rem;
+  padding-left: 9%;
+  padding-right: 9%;
+  line-height: 30px;
+}
+
+@media (min-width: 1400px) {
+  header h1, header .h1 {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+}
+/*********************BODY**************************/
+body {
+  height: 200vh;
 }
 
 /*********************MENU**************************/
@@ -12204,6 +12214,10 @@ main {
     padding-right: 20%;
   }
 }
+/*
+.navbar-collapse{
+    @extend %flex-center;
+}*/
 .navbar-nav {
   display: flex;
   justify-content: space-evenly;
@@ -12222,9 +12236,14 @@ main {
   color: #FF6F44; /*vertclair*/
 }
 
+.dropdown {
+  text-align: center;
+}
+
 .dropdown-menu {
   border-radius: 0%;
   border: none;
+  text-align: center;
 }
 
 .dropdown-item {
@@ -12234,69 +12253,46 @@ main {
   font-family: futura;
 }
 
-.navbar-toggler {
-  width: 20px;
-  height: 20px;
-  position: relative;
-  transition: 0.5s ease-in-out;
-  border: 0;
+.navbar-collapse {
+  margin-bottom: 0;
 }
 
-.navbar-toggler,
+.navbar-collapse.show {
+  margin-bottom: 2rem;
+}
+
+/*https://jsfiddle.net/njhgr40m/*/
+/* Remove border from toggler */
+.navbar-toggler {
+  border: 0 !important;
+}
+
 .navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler-icon:focus {
-  outline: none;
-  box-shadow: none;
-  border: 0;
-  position: relative;
+  outline: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
 }
 
-.navbar-toggler span {
-  margin: 0;
-  padding: 0;
-}
-
+/* Lines of the Toggler */
 .toggler-icon {
-  display: block;
-  position: absolute;
+  width: 30px;
   height: 3px;
-  width: 100%;
-  background: #ffffff;
-  border-radius: 1px;
-  opacity: 1;
-  left: 0;
-  transform: rotate(0deg);
-  transition: 0.5s ease-in-out;
-}
-
-.middle-bar {
-  margin-top: 0px;
-}
-
-.navbar-toggler.collapsed .top-bar {
-  position: absolute;
-  top: 0px;
-  transform: rotate(0deg);
-}
-
-.navbar-toggler.collapsed .middle-bar {
-  opacity: 1;
-  position: absolute;
-  top: 10px;
-  filter: alpha(opacity=100);
-}
-
-.navbar-toggler.collapsed .bottom-bar {
-  position: absolute;
-  top: 20px;
-  transform: rotate(0deg);
-}
-
-/* when navigation is clicked */
-.navbar-toggler .top-bar {
-  transform: rotate(135deg);
   background-color: #FF6F44;
+  display: block;
+  transition: all 0.5s;
+}
+
+/* Adds Space between the lines */
+.middle-bar {
+  margin: 5px auto;
+}
+
+/* State when navbar is opened (START) */
+.navbar-toggler .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
 }
 
 .navbar-toggler .middle-bar {
@@ -12305,10 +12301,124 @@ main {
 }
 
 .navbar-toggler .bottom-bar {
-  transform: rotate(-135deg);
-  background-color: #FF6F44;
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
 }
 
+/* State when navbar is opened (END) */
+/* State when navbar is collapsed (START) */
+.navbar-toggler.collapsed .top-bar {
+  transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+  transform: rotate(0);
+}
+
+/* State when navbar is collapsed (END) */
+/* Color of Toggler when collapsed */
 .navbar-toggler.collapsed .toggler-icon {
   background-color: #ffffff;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/********************HP*********************/
+main {
+  flex: 1;
+}
+
+.top-content {
+  width: 100%;
+  padding: 0;
+}
+
+/******CAROUSEL*****/
+/*https://azmind.com/bootstrap-carousel-full-screen/*/
+.top-content .carousel-control-prev {
+  border-bottom: 0;
+}
+
+.top-content .carousel-control-next {
+  border-bottom: 0;
+}
+
+.top-content .carousel-caption {
+  padding-bottom: 60px;
+}
+
+.top-content .carousel-caption h1, .top-content .carousel-caption .h1 {
+  padding-top: 60px;
+  color: #fff;
+}
+
+.top-content .carousel-caption h3, .top-content .carousel-caption .h3 {
+  color: #fff;
+}
+
+.top-content .carousel-caption .carousel-caption-description {
+  color: #fff;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.top-content .carousel-indicators li {
+  width: 16px;
+  height: 16px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+
+.top-content .carousel-item {
+  height: calc(100vh - 124px); /*** calculer hauteur header + nav***/
+  min-height: 400px;
+}
+
+.top-content .carousel-item img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 767px) {
+  h1, .h1, h2, .h2 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .top-content .carousel-caption {
+    bottom: 20px;
+  }
+  .top-content .carousel-indicators {
+    display: none;
+  }
+}
+@media (max-width: 575px) {
+  .top-content .carousel-caption {
+    bottom: 0;
+    padding-bottom: 20px;
+  }
+  .top-content h1, .top-content .h1,
+.top-content h2,
+.top-content .h2,
+.top-content h3,
+.top-content .h3 {
+    font-size: 18px;
+  }
+}
+@media (max-width: 575px) {
+  .top-content .carousel-item {
+    max-height: 400px;
+  }
+}
+/*#carouselHP{
+    height:100vh;
+    width:100%;
+    }
+
+.carousel-item{
+    background-image: url("../img/hp/sliderheader-heva.jpg");
+    height: 100%;
+}*//*# sourceMappingURL=main.css.map */

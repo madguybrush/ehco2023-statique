@@ -12351,8 +12351,10 @@ main {
 }
 
 .top-content .carousel-caption h1, .top-content .carousel-caption .h1 {
-  padding-top: 60px;
+  padding-top: 1rem;
   color: #fff;
+  font-family: raleway;
+  font-size: 2rem;
 }
 
 .top-content .carousel-caption h3, .top-content .carousel-caption .h3 {
@@ -12377,7 +12379,7 @@ main {
   min-height: 400px;
 }
 
-.top-content .carousel-item img {
+.top-content .carousel-item .fond {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -12413,6 +12415,10 @@ main {
     max-height: 400px;
   }
 }
+.carousel-caption {
+  top: 1.25rem;
+}
+
 /*#carouselHP{
     height:100vh;
     width:100%;

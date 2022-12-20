@@ -224,8 +224,10 @@ body {
 }
  
 .top-content .carousel-caption h1 {
-    padding-top: 60px;
+    padding-top: 1rem;
     color: #fff;
+    font-family: raleway;
+    font-size: 2rem;
 }
  
 .top-content .carousel-caption h3 {
@@ -250,7 +252,7 @@ body {
     min-height: 400px;
 }
  
-.top-content .carousel-item img {
+.top-content .carousel-item .fond {
     height: 100%;
     object-fit: cover;
 }
@@ -295,6 +297,11 @@ body {
     }
  
 }
+
+.carousel-caption{
+    top: 1.25rem;
+}
+
 
 
 /*#carouselHP{

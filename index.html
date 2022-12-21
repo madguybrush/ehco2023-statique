@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="Description" content="EH!CO est un écolieu de vacances, d’expérimentation, de partage et de (re)connexion à soi, à la nature et aux autres.">
-    <meta name="keywords" content="écolieu, vacances, expérimentation, partage, reconnexion, nature, médoc, plage, vin, guinguette, listrac, moulin">
+    <meta name="keywords" content="écolieu, vacances, expérimentation, partage, reconnexion, nature, médoc, plage, vin, guinguette, listrac, moulin, habitats, écologiques, séjours, thématiques">
     <link rel="stylesheet" href="./assets/css/animate.css">
     <!--<link rel="stylesheet" href="./assets/css/main.css">-->
     <link rel="stylesheet" href="./assets/scss/main.css">
@@ -72,18 +72,37 @@
     <main class="animated fadeIn">
 
       <section class="top-content">
-        <div id="carouselHP" class="carousel slide carousel-fade" data-bs-ride="true">
+        <div id="carouselHP" class="carousel slide " data-bs-ride="true"><!--carousel-fade-->
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselHP" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselHP" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#carouselHP" data-bs-slide-to="2" aria-label="Slide 3"></button>
           </div>
           <div class="carousel-inner">
-            <div class="carousel-item active">
+            <div class="carousel-item active" data-bs-interval="100000">
               <img src="./assets/img/hp/sliderheader-heva.jpg" class="d-block w-100 fond" alt="...">
-              <div class="carousel-caption d-none d-md-block">
+              <div class="carousel-caption "> <!--d-none d-md-block-->
                 <img src="./assets/img/logoblanc.png">
                 <h1>L'écolieu du Moulin de Peysoup</h1>
+                <div class="caption-bottom row">
+                  <div class="col-12">
+                    <h2>JE VEUX TESTER</h2>
+                  </div>
+                  <div class="col-lg-5 offset-xl-1 col-xl-4 offset-xxl-2 col-xxl-3 test-sejours">
+                    <h2>DES SÉJOURS THÉMATIQUES </h2>
+                    <h3>avec hébergement</h3>
+                  </div>
+                  <div class="col-lg-1 d-none d-lg-block">
+                    <img src="./assets/img/hp/fleche-sejours.png" class="img-fluid" alt="séjours thématiques">
+                  </div>
+                  <div class="col-lg-1 d-none d-lg-block">
+                    <img src="./assets/img/hp/fleche-habitats.png" class="img-fluid" alt="habitats écologiques">
+                  </div>
+                  <div class="col-lg-5 col-xl-4 col-xxl-3 test-habitats">
+                    <h2>UN HABITAT ÉCOLOGIQUE</h2> 
+                    <h3>avec activités à la carte</h3>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="carousel-item">
@@ -93,14 +112,14 @@
               <img src="./assets/img/hp/sliderheader-heva.jpg" class="d-block w-100 fond" alt="...">
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselHP" data-bs-slide="prev">
+          <!--<button class="carousel-control-prev" type="button" data-bs-target="#carouselHP" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
           <button class="carousel-control-next" type="button" data-bs-target="#carouselHP" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
-          </button>
+          </button>-->
         </div>
       </section>
 
@@ -123,6 +142,7 @@
       </section>
 
       <section class="venir">
+          <address></address>
 
       </section>
       

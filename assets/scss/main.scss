@@ -270,26 +270,10 @@ body {
         bottom: 20px;
     }
  
-    .top-content .carousel-indicators {
-        display: none;
-    }
+
  
 }
  
-@media (max-width: 575px) {
- 
-    .top-content .carousel-caption {
-        bottom: 0;
-        padding-bottom: 20px;
-    }
- 
-    .top-content h1, 
-    .top-content h2, 
-    .top-content h3 {
-        font-size: 18px;
-    }
- 
-}
 
 /*
 @media (max-width: 575px) {
@@ -316,15 +300,17 @@ body {
 }
 
 .top-content .carousel-indicators{
-    bottom: 4rem;
+    bottom: 5rem;
 }
 
 
 .test-sejours{
     background-color: rgba(157, 196, 26, 0.7); 
-    padding: 2rem;
-    border-radius: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
 }
+
+
 
 .test-sejours h2, .test-habitats h2{
     position: relative;
@@ -346,9 +332,11 @@ body {
 
 .test-habitats{
     background-color: rgba(255, 153, 0, 0.7); 
-    padding: 2rem;
-    border-radius: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
 }
+
+
 
 .test-habitats h3{
     position: relative;
@@ -363,14 +351,47 @@ body {
     padding: 0.25rem;
 }
 
+.flechesbas{
+    position: absolute;
+    bottom: 1.5rem;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
 
-/*#carouselHP{
-    height:100vh;
-    width:100%;
+@media (max-width: 992px) {
+ 
+    .test-sejours{
+        //padding: 0.5rem;
+        //border-radius: 0.5rem;
+        margin-bottom: 1rem;
     }
 
-.carousel-item{
-    background-image: url("../img/hp/sliderheader-heva.jpg");
-    height: 100%;
-}*/
+    .top-content .carousel-indicators {
+        display: none;
+    }
 
+
+
+}
+
+@media (max-width: 575px) {
+ 
+    .top-content .carousel-caption {
+        bottom: 0;
+        padding-bottom: 20px;
+    }
+ 
+    .top-content h1, 
+    .top-content h2, 
+    .top-content h3 {
+        font-size: 18px;
+    }
+
+    .flechesbas{
+        bottom: 1rem;
+    }
+ 
+}

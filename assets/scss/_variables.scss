@@ -8,7 +8,8 @@
 
 $vertclair:#EDFFAF; 
 $vertprincipal:#9DC41A;
-$verttexte: #39B54A;
+//$verttexte: #39B54A;
+$verttexte: #3FA535;
 $orange:#FF6F44;
 $orangeclair:#FF9900;
 $blanc: #ffffff;
@@ -1561,12 +1562,12 @@ $carousel-control-opacity:           .5 !default;
 $carousel-control-hover-opacity:     .9 !default;
 $carousel-control-transition:        opacity .15s ease !default;
 
-$carousel-indicator-width:           30px !default;
-$carousel-indicator-height:          3px !default;
+$carousel-indicator-width:           15px !default;
+$carousel-indicator-height:          15px !default;
 $carousel-indicator-hit-area-height: 10px !default;
 $carousel-indicator-spacer:          3px !default;
 $carousel-indicator-opacity:         .5 !default;
-$carousel-indicator-active-bg:       $white !default;
+$carousel-indicator-active-bg:       $verttexte !default;
 $carousel-indicator-active-opacity:  1 !default;
 $carousel-indicator-transition:      opacity .6s ease !default;
 

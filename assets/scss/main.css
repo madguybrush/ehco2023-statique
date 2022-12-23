@@ -6054,18 +6054,16 @@ textarea.form-control-lg {
 .carousel-indicators [data-bs-target] {
   box-sizing: content-box;
   flex: 0 1 auto;
-  width: 30px;
-  height: 3px;
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  border: 2px solid white;
   padding: 0;
   margin-right: 3px;
   margin-left: 3px;
   text-indent: -999px;
   cursor: pointer;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 0;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
+  background-color: #3FA535;
   opacity: 0.5;
   transition: opacity 0.6s ease;
 }
@@ -6076,6 +6074,7 @@ textarea.form-control-lg {
 }
 .carousel-indicators .active {
   opacity: 1;
+  background-color: white;
 }
 
 .carousel-caption {
@@ -12393,22 +12392,6 @@ main {
   .top-content .carousel-caption {
     bottom: 20px;
   }
-  .top-content .carousel-indicators {
-    display: none;
-  }
-}
-@media (max-width: 575px) {
-  .top-content .carousel-caption {
-    bottom: 0;
-    padding-bottom: 20px;
-  }
-  .top-content h1, .top-content .h1,
-.top-content h2,
-.top-content .h2,
-.top-content h3,
-.top-content .h3 {
-    font-size: 18px;
-  }
 }
 /*
 @media (max-width: 575px) {
@@ -12433,13 +12416,13 @@ main {
 }
 
 .top-content .carousel-indicators {
-  bottom: 4rem;
+  bottom: 5rem;
 }
 
 .test-sejours {
   background-color: rgba(157, 196, 26, 0.7);
-  padding: 2rem;
-  border-radius: 2rem;
+  padding: 1rem;
+  border-radius: 1rem;
 }
 
 .test-sejours h2, .test-sejours .h2, .test-habitats h2, .test-habitats .h2 {
@@ -12452,7 +12435,7 @@ main {
   z-index: 0;
   font-family: oliver;
   font-size: 1rem;
-  background-color: #39B54A;
+  background-color: #3FA535;
   rotate: -4deg;
   width: 75%;
   margin-left: 25%;
@@ -12462,8 +12445,8 @@ main {
 
 .test-habitats {
   background-color: rgba(255, 153, 0, 0.7);
-  padding: 2rem;
-  border-radius: 2rem;
+  padding: 1rem;
+  border-radius: 1rem;
 }
 
 .test-habitats h3, .test-habitats .h3 {
@@ -12479,12 +12462,37 @@ main {
   padding: 0.25rem;
 }
 
-/*#carouselHP{
-    height:100vh;
-    width:100%;
-    }
+.flechesbas {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
 
-.carousel-item{
-    background-image: url("../img/hp/sliderheader-heva.jpg");
-    height: 100%;
-}*//*# sourceMappingURL=main.css.map */
+@media (max-width: 992px) {
+  .test-sejours {
+    margin-bottom: 1rem;
+  }
+  .top-content .carousel-indicators {
+    display: none;
+  }
+}
+@media (max-width: 575px) {
+  .top-content .carousel-caption {
+    bottom: 0;
+    padding-bottom: 20px;
+  }
+  .top-content h1, .top-content .h1,
+.top-content h2,
+.top-content .h2,
+.top-content h3,
+.top-content .h3 {
+    font-size: 18px;
+  }
+  .flechesbas {
+    bottom: 1rem;
+  }
+}/*# sourceMappingURL=main.css.map */

@@ -172,23 +172,26 @@
     flex: 0 1 auto;
     width: $carousel-indicator-width;
     height: $carousel-indicator-height;
+    border-radius: 10px;
+    border: 2px solid white;
     padding: 0;
     margin-right: $carousel-indicator-spacer;
     margin-left: $carousel-indicator-spacer;
     text-indent: -999px;
     cursor: pointer;
     background-color: $carousel-indicator-active-bg;
-    background-clip: padding-box;
-    border: 0;
+    //background-clip: padding-box;
+    //border: 0;
     // Use transparent borders to increase the hit area by 10px on top and bottom.
-    border-top: $carousel-indicator-hit-area-height solid transparent;
-    border-bottom: $carousel-indicator-hit-area-height solid transparent;
+    //border-top: $carousel-indicator-hit-area-height solid transparent;
+    //border-bottom: $carousel-indicator-hit-area-height solid transparent;
     opacity: $carousel-indicator-opacity;
     @include transition($carousel-indicator-transition);
   }
 
   .active {
     opacity: $carousel-indicator-active-opacity;
+    background-color: white;
   }
 }
 

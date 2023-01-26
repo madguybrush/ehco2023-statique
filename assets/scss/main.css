@@ -12167,6 +12167,10 @@ textarea.form-control-lg {
   src: url("../fonts/futura-pt-extrabold.otf");
 }
 @font-face {
+  font-family: "futurademi";
+  src: url("../fonts/FuturaPTDemi.otf");
+}
+@font-face {
   font-family: "oliver";
   src: url("../fonts/Oliver-ehco.otf");
 }
@@ -12179,21 +12183,38 @@ header {
   background-color: #EDFFAF;
 }
 
-header h1, header .h1 {
+header {
   color: #9DC41A;
-  margin-bottom: 0;
-  font-size: 1rem;
+  font-family: futurademi;
   padding-left: 9%;
   padding-right: 9%;
-  line-height: 30px;
+  font-size: 1rem;
+  line-height: initial;
 }
 
+/*
+header h1{
+    font-size: 1rem;   
+    margin-bottom: 0;
+}*/
 @media (min-width: 1400px) {
-  header h1, header .h1 {
+  header {
     padding-left: 20%;
     padding-right: 20%;
   }
 }
+.drapeau {
+  height: 20px;
+}
+
+.rs {
+  height: 25px;
+}
+
+.lang-off {
+  color: #C6E65E;
+}
+
 /*********************BODY**************************/
 body {
   height: 200vh;
@@ -12495,4 +12516,54 @@ main {
   .flechesbas {
     bottom: 1rem;
   }
-}/*# sourceMappingURL=main.css.map */
+}
+.bienvenue {
+  background-color: #9FD02D;
+  min-height: 200px;
+}
+
+.bienvenue h2, .bienvenue .h2 {
+  font-family: futura;
+  font-size: 4rem;
+  color: #fff;
+  padding-top: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.bienvenue span {
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  font-family: oliver;
+  color: #ffffff;
+  font-size: 2rem;
+  background-color: #3FA535;
+  rotate: -4deg;
+  margin-left: 15%;
+  margin-top: -1.2rem;
+  padding: 0.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.bienvenue .arbre4 {
+  position: relative;
+  margin-top: -3rem;
+  margin-left: 10rem;
+}
+
+/*
+.bienvenue h3{
+position: relative;
+z-index: 0;
+font-family: oliver;
+color: $blanc;
+font-size: 2rem;
+background-color: $verttexte;
+rotate: -4deg;
+width: 50%;
+margin-left: 25%;
+margin-top: -0.7rem;
+padding: 0.25rem;
+}*//*# sourceMappingURL=main.css.map */

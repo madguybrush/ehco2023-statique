@@ -12197,12 +12197,6 @@ header h1{
     font-size: 1rem;   
     margin-bottom: 0;
 }*/
-@media (min-width: 1400px) {
-  header {
-    padding-left: 20%;
-    padding-right: 20%;
-  }
-}
 .drapeau {
   height: 20px;
 }
@@ -12227,13 +12221,6 @@ body {
   padding-right: 9%;
 }
 
-@media (min-width: 1400px) {
-  .navbar {
-    background-color: #9DC41A;
-    padding-left: 20%;
-    padding-right: 20%;
-  }
-}
 /*
 .navbar-collapse{
     @extend %flex-center;
@@ -12405,15 +12392,6 @@ main {
      object-fit: cover;
 }
 
-@media (max-width: 767px) {
-  h1, .h1, h2, .h2 {
-    font-size: 22px;
-    line-height: 30px;
-  }
-  .top-content .carousel-caption {
-    bottom: 20px;
-  }
-}
 /*
 @media (max-width: 575px) {
 
@@ -12443,7 +12421,7 @@ main {
 .test-sejours {
   background-color: rgba(157, 196, 26, 0.7);
   padding: 1rem;
-  border-radius: 1rem;
+  border-radius: 2rem;
 }
 
 .test-sejours h2, .test-sejours .h2, .test-habitats h2, .test-habitats .h2 {
@@ -12467,7 +12445,7 @@ main {
 .test-habitats {
   background-color: rgba(255, 153, 0, 0.7);
   padding: 1rem;
-  border-radius: 1rem;
+  border-radius: 2rem;
 }
 
 .test-habitats h3, .test-habitats .h3 {
@@ -12493,33 +12471,10 @@ main {
   z-index: 2;
 }
 
-@media (max-width: 992px) {
-  .test-sejours {
-    margin-bottom: 1rem;
-  }
-  .top-content .carousel-indicators {
-    display: none;
-  }
-}
-@media (max-width: 575px) {
-  .top-content .carousel-caption {
-    bottom: 0;
-    padding-bottom: 20px;
-  }
-  .top-content h1, .top-content .h1,
-.top-content h2,
-.top-content .h2,
-.top-content h3,
-.top-content .h3 {
-    font-size: 18px;
-  }
-  .flechesbas {
-    bottom: 1rem;
-  }
-}
 .bienvenue {
   background-color: #9FD02D;
   min-height: 200px;
+  padding-bottom: 12rem;
 }
 
 .bienvenue h2, .bienvenue .h2 {
@@ -12547,10 +12502,29 @@ main {
   padding-right: 1rem;
 }
 
-.bienvenue .arbre4 {
+.bienvenue .foret1 {
   position: relative;
-  margin-top: -3rem;
-  margin-left: 10rem;
+  margin-top: -6vh;
+  max-height: 300px;
+}
+
+.bienvenue .foret2 {
+  position: relative;
+  margin-top: -6vh;
+  max-height: 300px;
+}
+
+.bienvenue p {
+  font-family: raleway;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.sejours {
+  margin-top: -8rem;
+  background-color: #fff;
+  border-radius: 5rem;
 }
 
 /*
@@ -12566,4 +12540,47 @@ width: 50%;
 margin-left: 25%;
 margin-top: -0.7rem;
 padding: 0.25rem;
-}*//*# sourceMappingURL=main.css.map */
+}*/
+@media (min-width: 1400px) {
+  .navbar {
+    background-color: #9DC41A;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+  header {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+}
+@media (max-width: 992px) {
+  .test-sejours {
+    margin-bottom: 1rem;
+  }
+  .top-content .carousel-indicators {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  h1, .h1, h2, .h2 {
+    font-size: 22px;
+  }
+  .top-content .carousel-caption {
+    bottom: 20px;
+  }
+}
+@media (max-width: 575px) {
+  .top-content .carousel-caption {
+    bottom: 0;
+    padding-bottom: 20px;
+  }
+  .top-content h1, .top-content .h1,
+.top-content h2,
+.top-content .h2,
+.top-content h3,
+.top-content .h3 {
+    font-size: 18px;
+  }
+  .flechesbas {
+    bottom: 1rem;
+  }
+}/*# sourceMappingURL=main.css.map */

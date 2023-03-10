@@ -141,10 +141,14 @@
   } ]
 } */
 .carousel-control-prev-icon {
-  background-image: escape-svg($carousel-control-prev-icon-bg);
+  //background-image: escape-svg($carousel-control-prev-icon-bg);
+  background-image: url('../../assets/img/fleche-gauche.svg');
+  //background-image: $carousel-control-prev-icon-bg;
 }
 .carousel-control-next-icon {
-  background-image: escape-svg($carousel-control-next-icon-bg);
+  //background-image: escape-svg($carousel-control-next-icon-bg);
+  background-image: url('../../assets/img/fleche-droite.svg');
+  //background-image: $carousel-control-next-icon-bg;
 }
 
 // Optional indicator pips/controls

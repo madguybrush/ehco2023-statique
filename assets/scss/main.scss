@@ -66,15 +66,9 @@ header h1{
 
 /*********************BODY**************************/
 
-
-body {
-    //display: flex; 
-    //flex-direction: column;
-    //margin: 0;
-    height: 200vh;
-  }
-  
-
+html {
+    font-size: 100%;
+    }
 
 /*********************MENU**************************/
 
@@ -207,7 +201,9 @@ body {
 
 
   main {
-    flex: 1;
+    //flex: 1;
+    display: flex;
+    flex-direction: column;
   }
 
 
@@ -357,9 +353,6 @@ body {
     z-index: 2;
 }
 
-
-
-
 .bienvenue{
     background-color: $vertfond;
     min-height: 200px;
@@ -421,25 +414,723 @@ body {
     border-radius: 5rem;
 }
 
+.sejours h2{
+    color: $verttexte;
+    font-family: futura;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    padding-top: 2rem;
+    position: relative;
+    z-index: 1;
+    line-height: 3.8rem;
+}
+
+.sejours .soustitre{
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    font-family: oliver;
+    color: $blanc;
+    font-size: 1.5rem;
+    background-color: $vertprincipal;
+    rotate: -4deg;
+    margin-left: 25%;
+    margin-top: -1.2rem;
+    padding: 0.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.sejours p{
+    font-family: raleway;
+    color: $verttexte;
+    //font-weight: 600;
+    font-size: 1.2rem;
+}
+    
+
+
+.sejours .foret3{
+    position: relative;
+    margin-top: -10vh;
+    max-height: 300px;
+    //margin-left: 8vw;
+}
+
+.sejours .foret4{
+    position: relative;
+    margin-top: -6vh;
+    max-height: 300px;
+    //margin-right: 8vw;
+}
 
 
 
 
+.swiper_hp_sejours .entry-excerpt {
+    display: none;
+}
+
+.swiper_hp_sejours .cs-video-wrapper {
+    display: none;
+}
+
+.swiper-wrapper {
+    height: auto;
+}
+
+.englobe_swiper_hp_sejours {
+    //background-color: #f2f4f6;
+    position: relative !important;
+    margin-top: 16px;
+}
+.swiper_hp_sejours {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 1rem;
+    padding-bottom: 2rem;
+}
 /*
-.bienvenue h3{
-position: relative;
-z-index: 0;
-font-family: oliver;
-color: $blanc;
-font-size: 2rem;
-background-color: $verttexte;
-rotate: -4deg;
-width: 50%;
-margin-left: 25%;
-margin-top: -0.7rem;
-padding: 0.25rem;
+.swiper_hp_sejours .swiper-slide-content {
+    padding: 20px;
 }*/
 
+.swiper-button-prev, .swiper-button-next {
+    top: 45% !important;
+    //top: 12.5rem !important;
+    /*width: 63px !important;
+    height: 63px !important;
+    margin-top: 0 !important;*/
+}
+
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
+    content: none;
+}
+
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
+    content: none;
+}
+
+
+
+.swiper-button-prev::before, .swiper-button-next::before {
+    width: 14px !important;
+    height: 14px !important;
+}
+
+.swiper-slide {
+    background: #fff;
+    margin-left: 5px;
+    box-shadow: 6px 6px 30px #00000029;
+    position: relative;
+    //border-radius: 8px;
+    /*overflow: hidden;
+    height: 400px !important;
+    min-height: 384px !important;
+    max-height: 400px !important;*/
+}
+
+.swiper-slide h4 {
+    font-size: 24px;
+}
+
+
+
+.swiper-slide .entry-more {
+    display: none;
+}
+
+
+.swiper-slide .post-categories li {
+    padding-left: 0 !important;
+    background-color: transparent !important;
+}
+
+.swiper-slide .post-categories a {
+    font-size: 10px !important;
+    color: #455775 !important;
+}
+
+.swiper_hp_sejours .entry-excerpt {
+    margin-bottom: 17px !important;
+}
+
+.swiper_hp_sejours .swiper-wrapper {
+    padding: 0 20px 0 0;
+}
+/*
+.swiper_slide_homepage_top img {
+    height : auto;
+}*/
+
+
+
+.prix-sejour{
+    position: absolute;
+    top:15px;
+    right: -15px;
+    background-color: $verttexte;
+    border-radius: 50%;
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    padding: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: rotate(5deg);
+}
+
+.a-partir{
+    font-family: oliver;
+    font-size: 0.5rem;
+    color: $blanc;
+}
+
+.prix{
+    color: $blanc;
+    font-family: futura;
+    font-size: 1.5rem;
+}
+
+
+.container-titre-sejours{
+    position: relative;
+    margin-top: -35px;
+    display: flex;
+    height: 70px;
+}
+
+.bande-titre-sejours{
+    background-color: $vertprincipal;
+    font-family: oliver;
+    color: $verttexte;
+    font-size: 1.2rem;
+    margin-left: -5px;
+    padding-left: 1.5rem;
+    width: 80%;
+    //margin-top: -1rem;
+    //margin-left: -0.3rem;
+}
+
+.bande-titre-sejours h4{
+    background-color: $vertprincipal;
+    color: #fff;
+    font-family: futura;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    margin-top: 0.5rem;
+
+    //text-align: center;
+}
+
+.arrow-top {
+    width: 0%; 
+    height: 0; 
+    border-left: 25px solid $vertprincipal; 
+    border-right: 0px solid transparent;
+    border-bottom: 35px solid transparent;
+    background-color: transparent!important;
+  }
+
+  .arrow-bot {
+    width: 0%; 
+    height: 0; 
+    border-left: 25px solid $vertprincipal; 
+    border-right: 0px solid transparent;
+    border-top: 35px solid transparent;
+    background-color: transparent!important;
+    margin-left: -25px;
+    margin-top: 35px;
+  }
+
+.arrow-upright {
+    width: 0%; 
+    height: 0; 
+    border-left: 0px solid transparent; 
+    border-right: 5px solid $verttexte;
+    border-bottom: 5px solid transparent;
+    background-color: transparent!important;
+    margin-left: -5px;
+  }
+  
+
+.meta-category a{
+    font-family: raleway;
+    font-weight: 200;
+    font-size: 0.7rem;
+    color: #fff;
+    background-color: $verttexte;
+    border-radius: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    margin: 0.2rem;
+    text-transform: uppercase;
+}
+
+.meta-category a:hover{
+    //color: $verttexte;
+    //background-color: $blanc;
+    opacity: 50%;
+}
+
+.description{
+    font-family: futurademi;
+    color: $verttexte;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14px;
+}
+
+.details-sejours{
+    color: $vertprincipal;
+    font-family: raleway;
+    font-size: 0.8rem;
+}
+
+.dates-sejours{
+    display: flex;
+    //justify-content: space-between;
+}
+
+.date-sejour{
+    font-family: futurademi;
+    font-size: 0.6rem;
+    color: $vertprincipal;
+    background-color: $blanc;
+    border-radius: 3px;
+    border: 1px solid $vertprincipal;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.date-sejour:hover{
+    background-color: $vertprincipal;
+    color: $blanc;
+}
+
+
+.btn-reserver-sejour{
+    background: $vertprincipal 0% 0% no-repeat padding-box;
+    box-shadow: 6px 6px 15px #00000059;
+    border-radius: 73px;
+    border: none;
+    font-family: futura;
+    font-size: 1.8rem;
+    letter-spacing: 0px;
+    color: $blanc;
+    line-height: 1.5rem;
+    padding: 3.5rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+
+}
+
+.btn-reserver-sejour span{
+    font-family: raleway;
+    font-size: 1rem;
+}
+
+.btn-reserver-sejour:hover{
+    //opacity: 0.8;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
+}
+
+
+.habitats{
+    background-color: #FEFFEB;
+    padding-bottom: 12rem;
+}
+
+
+.habitats h2{
+    color: $orange;
+    font-family: futura;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    padding-top: 2rem;
+    position: relative;
+    z-index: 1;
+    line-height: 3.8rem;
+}
+
+.habitats .soustitre{
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    font-family: oliver;
+    color: $blanc;
+    font-size: 1.5rem;
+    background-color: $orangeclair;
+    rotate: -4deg;
+    margin-left: 25%;
+    margin-top: -1.2rem;
+    padding: 0.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.habitats p{
+    font-family: raleway;
+    color: $orangeclair;
+    //font-weight: 600;
+    font-size: 1.2rem;
+}
+
+
+.habitats .foret5{
+    position: relative;
+    //margin-top: -10vh;
+    //max-height: 300px;
+    object-fit: cover;
+}
+
+.habitats .foret6{
+    position: relative;
+   // margin-top: -6vh;
+    //max-height: 300px;
+    object-fit: cover;
+}
+
+
+
+
+.swiper_hp_habitats .entry-excerpt {
+    display: none;
+}
+
+.swiper_hp_habitats .cs-video-wrapper {
+    display: none;
+}
+
+.swiper-wrapper {
+    height: auto;
+}
+
+.englobe_swiper_hp_habitats {
+    //background-color: #f2f4f6;
+    position: relative !important;
+    margin-top: 16px;
+    background-color: $blanc;
+    border-radius: 103px;
+}
+.swiper_hp_habitats {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 1rem;
+    padding: 3rem;
+    padding-bottom: 2rem;
+
+}
+
+/*
+.swiper-button-prev, .swiper-button-next {
+    top: 45% !important;
+
+}
+
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
+    content: none;
+}
+
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
+    content: none;
+}
+
+
+
+.swiper-button-prev::before, .swiper-button-next::before {
+    width: 14px !important;
+    height: 14px !important;
+}
+
+.swiper-slide {
+    background: #fff;
+    margin-left: 5px;
+    box-shadow: 6px 6px 30px #00000029;
+    position: relative;
+}
+
+.swiper-slide h4 {
+    font-size: 24px;
+}
+
+
+
+.swiper-slide .entry-more {
+    display: none;
+}
+
+
+.swiper-slide .post-categories li {
+    padding-left: 0 !important;
+    background-color: transparent !important;
+}
+
+.swiper-slide .post-categories a {
+    font-size: 10px !important;
+    color: #455775 !important;
+}*/
+
+.swiper_hp_habitats .entry-excerpt {
+    margin-bottom: 17px !important;
+}
+
+.swiper_hp_habitats .swiper-wrapper {
+    padding: 0 20px 0 0;
+}
+
+
+
+
+.prix-habitats{
+    position: absolute;
+    top:15px;
+    right: -15px;
+    background-color: $orange;
+    border-radius: 50%;
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    padding: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: rotate(5deg);
+}
+
+.a-partir{
+    font-family: oliver;
+    font-size: 0.5rem;
+    color: $blanc;
+}
+
+.prix{
+    color: $blanc;
+    font-family: futura;
+    font-size: 1.5rem;
+}
+
+
+.container-titre-habitats{
+    position: relative;
+    margin-top: -35px;
+    display: flex;
+    height: 70px;
+}
+
+.bande-titre-habitats{
+    background-color: $orangeclair;
+    font-family: oliver;
+    color: #FFF9BA;
+    font-size: 1.2rem;
+    margin-left: -5px;
+    padding-left: 1.5rem;
+    width: 80%;
+    //margin-top: -1rem;
+    //margin-left: -0.3rem;
+}
+
+.bande-titre-habitats h4{
+    background-color: $orangeclair;
+    color: #fff;
+    font-family: futura;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    margin-top: 0.5rem;
+
+    //text-align: center;
+}
+
+.swiper_hp_habitats .arrow-top {
+    width: 0%; 
+    height: 0; 
+    border-left: 25px solid $orangeclair; 
+    border-right: 0px solid transparent;
+    border-bottom: 35px solid transparent;
+    background-color: transparent!important;
+  }
+
+  .swiper_hp_habitats .arrow-bot {
+    width: 0%; 
+    height: 0; 
+    border-left: 25px solid $orangeclair; 
+    border-right: 0px solid transparent;
+    border-top: 35px solid transparent;
+    background-color: transparent!important;
+    margin-left: -25px;
+    margin-top: 35px;
+  }
+
+  .swiper_hp_habitats .arrow-upright {
+    width: 0%; 
+    height: 0; 
+    border-left: 0px solid transparent; 
+    border-right: 5px solid $orange;
+    border-bottom: 5px solid transparent;
+    background-color: transparent!important;
+    margin-left: -5px;
+  }
+  
+
+  .swiper_hp_habitats .meta-category a{
+    background-color: $orange;
+}
+
+.description{
+    font-family: futurademi;
+    color: $verttexte;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14px;
+}
+
+.details-habitats{
+    color: $vertprincipal;
+    font-family: raleway;
+    font-size: 0.8rem;
+}
+
+.btn-reserver-habitat{
+    background: $orangeclair 0% 0% no-repeat padding-box;
+    box-shadow: 6px 6px 15px #00000059;
+    border-radius: 73px;
+    border: none;
+    font-family: futura;
+    font-size: 1.8rem;
+    letter-spacing: 0px;
+    color: $blanc;
+    line-height: 1.5rem;
+    padding: 3.5rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+
+}
+
+.btn-reserver-habitat span{
+    font-family: raleway;
+    font-size: 1rem;
+}
+
+.btn-reserver-habitat:hover{
+    //opacity: 0.8;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
+}
+
+
+
+
+.description-habitats{
+    color: $orangeclair;
+    font-family: raleway;
+    font-size: 1rem;
+}
+
+
+//////////HP ACTIVITES////////////////////
+
+.activites{
+
+    background-color: $vertprincipal;
+    color: $blanc;
+} 
+
+.activites .container{
+    background-color: $vertprincipal;
+    color: $blanc;
+    margin-top: -8rem;
+    border-radius: 5rem;
+} 
+
+
+.activites .foret7{
+    position: relative;
+
+   //object-fit: cover;
+}
+
+.activites .foret8{
+    position: relative;
+   margin-top: -9vh;
+
+    //object-fit: cover;
+}
+
+.activites h2{
+    color: $blanc;
+    font-family: futura;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    padding-top: 2rem;
+    position: relative;
+    z-index: 1;
+    line-height: 3.8rem;
+}
+
+.activites .soustitre{
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    font-family: oliver;
+    color: $blanc;
+    font-size: 1.5rem;
+    background-color: $verttexte;
+    rotate: -4deg;
+    margin-left: 25%;
+    margin-top: -1.2rem;
+    padding: 0.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.activites p{
+    font-family: raleway;
+    color: $blanc;
+    //font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.btn-activites{
+    background: $vertbtn 0% 0% no-repeat padding-box;
+    box-shadow: 6px 6px 15px #00000059;
+    border-radius: 73px;
+    border: none;
+    font-family: futura;
+    font-size: 1.8rem;
+    letter-spacing: 0px;
+    color: $blanc;
+    line-height: 1.5rem;
+    padding: 3.5rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+
+}
+
+.btn-activites span{
+    font-family: raleway;
+    font-size: 1rem;
+}
+
+.btn-activites:hover{
+    //opacity: 0.8;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
+}
+
+
+///////////////////RESPONSIVE//////////////////
 
 
 @media (min-width: 1400px) {
@@ -467,26 +1158,42 @@ padding: 0.25rem;
         display: none;
     }
 
+    .swiper-button-prev, .swiper-button-next{
+        display: none!important
+    }
+
 
 
 }
 
 
 
-
-
 @media (max-width: 767px) {
  
-    h1, h2 {
+   /* h1, h2 {
         font-size: 22px;
-        //line-height: 30px;
-    }
+       
+    }*/
  
     .top-content .carousel-caption {
         bottom: 20px;
     }
  
+   /* .bienvenue h2, .sejours h2, .habitats h2{
+        font-size: 75%;
+    }
+*/
 
+    html {
+        font-size: 85%;
+        }
+}
+
+
+@media (max-width: 600px){
+    .englobe_swiper_hp_sejours {
+        margin-left: 8px !important;
+    }
 }
  
 @media (max-width: 575px) {
@@ -496,11 +1203,11 @@ padding: 0.25rem;
         padding-bottom: 20px;
     }
  
-    .top-content h1, 
+    /*.top-content h1, 
     .top-content h2, 
     .top-content h3 {
-        font-size: 18px;
-    }
+        font-size: 80%;
+    }*/
 
     .flechesbas{
         bottom: 1rem;

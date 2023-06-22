@@ -5,6 +5,7 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+/*gray-200*/
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -3276,7 +3277,7 @@ textarea.form-control-lg {
   --bs-dropdown-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   --bs-dropdown-link-color: #212529;
   --bs-dropdown-link-hover-color: #1e2125;
-  --bs-dropdown-link-hover-bg: #e9ecef;
+  --bs-dropdown-link-hover-bg: #EDFFAF;
   --bs-dropdown-link-active-color: #fff;
   --bs-dropdown-link-active-bg: #0d6efd;
   --bs-dropdown-link-disabled-color: #adb5bd;
@@ -5847,8 +5848,7 @@ textarea.form-control-lg {
   float: left;
   width: 100%;
   margin-right: -100%;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   transition: transform 0.6s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -12041,6 +12041,41 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+html {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+/**********LOADER**********/
+.loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #ffffff;
+  border-radius: 50%;
+  border-top: 16px solid #FF6F44;
+  border-bottom: 16px solid #9FD02D;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /*****************TYPOS********************/
 @font-face {
   font-family: "futura";
@@ -12061,15 +12096,12 @@ textarea.form-control-lg {
 /*********************HEADER**************************/
 header {
   background-color: #EDFFAF;
-}
-
-header {
   color: #9DC41A;
   font-family: futurademi;
   padding-left: 9%;
   padding-right: 9%;
   font-size: 1rem;
-  line-height: initial;
+  line-height: 40px; /*initial*/
 }
 
 /*
@@ -12087,11 +12119,6 @@ header h1{
 
 .lang-off {
   color: #C6E65E;
-}
-
-/*********************BODY**************************/
-html {
-  font-size: 100%;
 }
 
 /*********************MENU**************************/
@@ -12271,6 +12298,12 @@ main {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+
+.carousel-caption > img {
+  max-width: 60%;
 }
 
 /*
@@ -12285,6 +12318,7 @@ main {
   top: 1.25rem;
   right: 5%;
   left: 5%;
+  z-index: 2;
 }
 
 .top-content .caption-bottom {
@@ -12302,43 +12336,50 @@ main {
 .test-sejours {
   background-color: rgba(157, 196, 26, 0.7);
   padding: 1rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
   border-radius: 2rem;
+  display: grid;
 }
 
 .test-sejours h2, .test-sejours .h2, .test-habitats h2, .test-habitats .h2 {
   position: relative;
+  margin-bottom: -5px;
   z-index: 1;
 }
 
 .test-sejours h3, .test-sejours .h3 {
   position: relative;
+  display: inline-flex;
+  justify-self: center;
   z-index: 0;
   font-family: oliver;
   font-size: 1rem;
   background-color: #3FA535;
   rotate: -4deg;
-  width: 75%;
-  margin-left: 25%;
-  margin-top: -0.7rem;
+  margin-left: 20%;
   padding: 0.25rem;
 }
 
 .test-habitats {
   background-color: rgba(255, 153, 0, 0.7);
   padding: 1rem;
+  padding-left: 2rem;
   border-radius: 2rem;
+  border-radius: 2rem;
+  display: grid;
 }
 
 .test-habitats h3, .test-habitats .h3 {
   position: relative;
+  display: inline-flex;
+  justify-self: center;
   z-index: 0;
   font-family: oliver;
   font-size: 1rem;
   background-color: #FF6F44;
   rotate: -4deg;
-  width: 75%;
-  margin-left: 25%;
-  margin-top: -0.7rem;
+  margin-left: 20%;
   padding: 0.25rem;
 }
 
@@ -12398,7 +12439,6 @@ main {
 .bienvenue p {
   font-family: raleway;
   color: #fff;
-  font-weight: 600;
   font-size: 1.2rem;
 }
 
@@ -12605,6 +12645,7 @@ main {
   border-right: 0px solid transparent;
   border-bottom: 35px solid transparent;
   background-color: transparent !important;
+  margin-left: -1px;
 }
 
 .arrow-bot {
@@ -12614,7 +12655,7 @@ main {
   border-right: 0px solid transparent;
   border-top: 35px solid transparent;
   background-color: transparent !important;
-  margin-left: -25px;
+  margin-left: -26px;
   margin-top: 35px;
 }
 
@@ -12759,6 +12800,13 @@ main {
      object-fit: cover;
 }
 
+/*
+.sejours .foret4{
+    position: relative;
+    margin-top: -6vh;
+    max-height: 300px;
+}
+*/
 .swiper_hp_habitats .entry-excerpt {
   display: none;
 }
@@ -13054,6 +13102,101 @@ main {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
+.activites h4, .activites .h4 {
+  color: #ffffff;
+  font-family: futura;
+  font-size: 1.2rem;
+}
+
+.activites .grasvert {
+  font-weight: bold;
+  color: #3FA535;
+}
+
+footer {
+  background-color: #3FA535;
+}
+
+footer h2, footer .h2 {
+  color: #ffffff;
+  font-family: futura;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  padding-top: 2rem;
+  position: relative;
+  z-index: 1;
+  line-height: 3.8rem;
+}
+
+footer .soustitre {
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  font-family: oliver;
+  color: #ffffff;
+  font-size: 1.5rem;
+  background-color: #9FD02D;
+  rotate: -4deg;
+  margin-left: 75%;
+  margin-top: -1.2rem;
+  padding: 0.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+footer .ligne {
+  border: 2px dashed #FFFFFF;
+  height: 1px;
+  width: 100%;
+}
+
+.btn-footer {
+  background: #9DC41A 0% 0% no-repeat padding-box;
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3490196078);
+  border-radius: 73px;
+  border: none;
+  font-family: futura;
+  font-size: 1.8rem;
+  letter-spacing: 0px;
+  color: #ffffff;
+  line-height: 1.5rem;
+  padding: 3.5rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.btn-footer span {
+  font-family: raleway;
+  font-size: 1rem;
+}
+
+.btn-footer:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+footer address {
+  font-family: futurademi;
+  color: #ffffff;
+  font-size: 1.3rem;
+}
+
+footer address strong {
+  font-family: futura;
+  color: #ffffff;
+}
+
+footer .mentions {
+  color: #9FD02D;
+  font-family: futura;
+  font-size: 1.3rem;
+}
+
+footer .credits {
+  color: #4CC95D;
+  text-align: end;
+  font-size: 0.9rem;
+}
+
 @media (min-width: 1400px) {
   .navbar {
     background-color: #9DC41A;
@@ -13099,7 +13242,7 @@ main {
 }
 @media (max-width: 575px) {
   .top-content .carousel-caption {
-    bottom: 0;
+    bottom: 10px;
     padding-bottom: 20px;
   }
   /*.top-content h1, 
@@ -13107,7 +13250,14 @@ main {
   .top-content h3 {
       font-size: 80%;
   }*/
+  .bienvenue h2, .bienvenue .h2, .habitats h2, .habitats .h2, .sejours h2, .sejours .h2, .activites h2, .activites .h2 {
+    font-size: 2.5rem;
+    line-height: 2.8rem;
+  }
   .flechesbas {
-    bottom: 1rem;
+    bottom: 0.5rem;
+  }
+  html {
+    font-size: 75%;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -1,4 +1,23 @@
 
+$(window).load(function(){
+  // PAGE IS FULLY LOADED  
+  // FADE OUT YOUR OVERLAYING DIV
+
+  //$('.container-loader').css('opacity', '0'); 
+  //$('.container-loader').css('display', 'none'); 
+
+  $('.loader').addClass('d-none ');
+  $('header').removeClass('d-none ');
+  $('.navbar').removeClass('d-none ');
+  $('main').removeClass('d-none ');
+  $('footer').removeClass('d-none ');
+
+ //$('.container').css('opacity', '1');  
+   
+ 
+});
+
+
 
 var swiper_hp_sejours = new Swiper('.swiper_hp_sejours', {
   // Optional parameters
@@ -21,8 +40,8 @@ var swiper_hp_sejours = new Swiper('.swiper_hp_sejours', {
           //centeredSlides: false,
       },
       1400: {
-        slidesPerView: 3.5,
-        spaceBetween: 38,
+        slidesPerView: 3.3,
+        spaceBetween: 40,
         //centeredSlides: false,
     },
 
@@ -59,8 +78,8 @@ var swiper_hp_habitats = new Swiper('.swiper_hp_habitats', {
         //centeredSlides: false,
     },
     1600: {
-      slidesPerView: 3.1,
-      spaceBetween: 38,
+      slidesPerView: 3.05,
+      spaceBetween: 45,
       //centeredSlides: false,
   },
 

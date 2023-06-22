@@ -5,6 +5,7 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+/*gray-200*/
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -3276,7 +3277,7 @@ textarea.form-control-lg {
   --bs-dropdown-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   --bs-dropdown-link-color: #212529;
   --bs-dropdown-link-hover-color: #1e2125;
-  --bs-dropdown-link-hover-bg: #e9ecef;
+  --bs-dropdown-link-hover-bg: #EDFFAF;
   --bs-dropdown-link-active-color: #fff;
   --bs-dropdown-link-active-bg: #0d6efd;
   --bs-dropdown-link-disabled-color: #adb5bd;
@@ -5847,8 +5848,7 @@ textarea.form-control-lg {
   float: left;
   width: 100%;
   margin-right: -100%;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   transition: transform 0.6s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {

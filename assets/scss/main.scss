@@ -1,7 +1,49 @@
 
 
 
+
 @import './bootstrap.scss';
+
+
+html{
+	height: 100%;
+	width: 100%; 
+	font-size: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+//overflow-wrap: break-word;
+//background-color: $verttexte;
+}
+
+
+
+/**********LOADER**********/
+
+.loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid $blanc;
+    border-radius: 50%;
+    border-top: 16px solid $orange;
+    border-bottom: 16px solid $vertfond;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
 
 
 /*****************TYPOS********************/
@@ -30,18 +72,14 @@
 /*********************HEADER**************************/
 
 header{
-background-color: $vertclair;    
-
-}
-
-header{
+    background-color: $vertclair;    
     color: $vertprincipal;
     font-family: futurademi;
     //font-weight: 200;
     padding-left: 9%;
     padding-right: 9%;
     font-size: 1rem;   
-    line-height: initial;
+    line-height: 40px; /*initial*/
     //line-height: 30px;
 }
 /*
@@ -64,11 +102,6 @@ header h1{
     color : #C6E65E;
 }
 
-/*********************BODY**************************/
-
-html {
-    font-size: 100%;
-    }
 
 /*********************MENU**************************/
 
@@ -263,9 +296,12 @@ html {
 .top-content .carousel-item .fond {
     height: 100%;
     object-fit: cover;
+    object-position: bottom;
 }
 
-
+.carousel-caption>img{
+    max-width: 60%;
+}
 
 /*
 @media (max-width: 575px) {
@@ -281,6 +317,7 @@ html {
     //position: absolute;
     right: 5%;
     left: 5%;
+    z-index: 2;
 }
 
 .top-content .caption-bottom{
@@ -299,47 +336,59 @@ html {
 .test-sejours{
     background-color: rgba(157, 196, 26, 0.7); 
     padding: 1rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
     border-radius: 2rem;
+    display: grid;
 }
 
 
 
 .test-sejours h2, .test-habitats h2{
     position: relative;
+    margin-bottom: -5px;
     z-index: 1;
+
 }
 
 .test-sejours h3{
     position: relative;
+    display: inline-flex;
+    justify-self: center;
     z-index: 0;
     font-family: oliver;
     font-size: 1rem;
     background-color: $verttexte;
     rotate: -4deg;
-    width: 75%;
-    margin-left: 25%;
-    margin-top: -0.7rem;
+    //width: 75%;
+    margin-left: 20%;
+    //margin-top: -10px; //0.7rem;
     padding: 0.25rem;
 }
 
 .test-habitats{
     background-color: rgba(255, 153, 0, 0.7); 
     padding: 1rem;
+    padding-left: 2rem;
     border-radius: 2rem;
+    border-radius: 2rem;
+    display: grid;
 }
 
 
 
 .test-habitats h3{
     position: relative;
+    display: inline-flex;
+    justify-self: center;
     z-index: 0;
     font-family: oliver;
     font-size: 1rem;
     background-color: $orange;
     rotate: -4deg;
-    width: 75%;
-    margin-left: 25%;
-    margin-top: -0.7rem;
+    //width: 75%;
+    margin-left: 20%;
+    //margin-top: -0.7rem;
     padding: 0.25rem;
 }
 
@@ -402,7 +451,7 @@ html {
 .bienvenue p{
     font-family: raleway;
     color: #fff;
-    font-weight: 600;
+    //font-weight: 600;
     font-size: 1.2rem;
 }
 
@@ -633,6 +682,7 @@ html {
     border-right: 0px solid transparent;
     border-bottom: 35px solid transparent;
     background-color: transparent!important;
+    margin-left: -1px;
   }
 
   .arrow-bot {
@@ -642,7 +692,7 @@ html {
     border-right: 0px solid transparent;
     border-top: 35px solid transparent;
     background-color: transparent!important;
-    margin-left: -25px;
+    margin-left: -26px;
     margin-top: 35px;
   }
 
@@ -800,7 +850,13 @@ html {
     //max-height: 300px;
     object-fit: cover;
 }
-
+/*
+.sejours .foret4{
+    position: relative;
+    margin-top: -6vh;
+    max-height: 300px;
+}
+*/
 
 
 
@@ -1128,7 +1184,107 @@ html {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 
 }
+.activites h4{
+    color: $blanc;
+    font-family: futura;
+    font-size: 1.2rem;
+}
 
+.activites .grasvert{
+    font-weight: bold;
+    color: $verttexte;
+}
+
+
+///////////////////FOOTER//////////////////
+
+footer{
+    background-color: $verttexte;
+}
+
+footer h2{
+    color: $blanc;
+    font-family: futura;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    padding-top: 2rem;
+    position: relative;
+    z-index: 1;
+    line-height: 3.8rem;
+}
+
+footer .soustitre{
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    font-family: oliver;
+    color: $blanc;
+    font-size: 1.5rem;
+    background-color: $vertfond;
+    rotate: -4deg;
+    margin-left: 75%;
+    margin-top: -1.2rem;
+    padding: 0.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+footer .ligne{
+    border: 2px dashed #FFFFFF;
+    height: 1px;
+    width: 100%;
+}
+
+
+.btn-footer{
+    background: $vertprincipal 0% 0% no-repeat padding-box;
+    box-shadow: 6px 6px 15px #00000059;
+    border-radius: 73px;
+    border: none;
+    font-family: futura;
+    font-size: 1.8rem;
+    letter-spacing: 0px;
+    color: $blanc;
+    line-height: 1.5rem;
+    padding: 3.5rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+
+}
+
+.btn-footer span{
+    font-family: raleway;
+    font-size: 1rem;
+}
+
+.btn-footer:hover{
+    //opacity: 0.8;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
+}
+
+footer address{
+    font-family: futurademi;
+    color: $blanc;
+    font-size: 1.3rem;
+}
+
+footer address strong{
+    font-family: futura;
+    color: $blanc;
+}
+
+footer .mentions{
+    color: $vertfond;
+    font-family: futura;
+    font-size: 1.3rem;
+}
+
+footer .credits{
+    color: #4CC95D;
+    text-align: end;
+    font-size: 0.9rem;
+}
 
 ///////////////////RESPONSIVE//////////////////
 
@@ -1199,7 +1355,7 @@ html {
 @media (max-width: 575px) {
  
     .top-content .carousel-caption {
-        bottom: 0;
+        bottom: 10px;
         padding-bottom: 20px;
     }
  
@@ -1209,8 +1365,19 @@ html {
         font-size: 80%;
     }*/
 
+
+    .bienvenue h2, .habitats h2, .sejours h2,.activites h2{
+        font-size: 2.5rem;
+        line-height: 2.8rem;
+    }
+
     .flechesbas{
-        bottom: 1rem;
+        bottom: 0.5rem;
     }
  
+
+    html {
+        font-size: 75%;
+        }
+
 }

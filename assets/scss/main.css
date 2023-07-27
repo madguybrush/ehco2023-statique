@@ -12150,6 +12150,10 @@ header h1{
   color: #FF6F44; /*vertclair*/
 }
 
+.dropdown-item:hover, .dropdown-item:focus {
+  background-color: #fff;
+}
+
 .dropdown {
   text-align: center;
 }
@@ -12238,6 +12242,20 @@ header h1{
 /* Color of Toggler when collapsed */
 .navbar-toggler.collapsed .toggler-icon {
   background-color: #ffffff;
+}
+
+.boncadeau {
+  width: 100px;
+  position: fixed;
+  background-color: #FF9900;
+  font-family: "futura", Arial, sans-serif;
+  font-size: 0.8rem;
+  z-index: 9999;
+  color: #d94a1f;
+  box-shadow: 6px 6px 30px rgba(0, 0, 0, 0.1607843137);
+  text-align: center;
+  right: 0px;
+  top: 45%;
 }
 
 /********************HP*********************/

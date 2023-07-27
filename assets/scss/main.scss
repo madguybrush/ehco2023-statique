@@ -134,6 +134,11 @@ header h1{
 
 .nav-link:hover, .nav-link:focus, .dropdown-item:hover, .dropdown-item:focus{
     color: $orange; /*vertclair*/
+    //background-color: #fff;
+}
+
+.dropdown-item:hover, .dropdown-item:focus{
+    background-color: #fff;
 }
 
 .dropdown{
@@ -229,6 +234,20 @@ header h1{
     background-color: $blanc;
 }
 
+
+.boncadeau{
+    width: 100px;
+    position: fixed;
+    background-color: $orangeclair;
+    font-family: 'futura', Arial, sans-serif;
+    font-size: .8rem;
+    z-index: 9999;
+    color: #d94a1f; //$orange;
+    box-shadow: 6px 6px 30px #00000029;
+    text-align: center;
+    right: 0px;
+    top: 45%;
+}
 
 /********************HP*********************/
 

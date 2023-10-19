@@ -11992,6 +11992,7 @@ html {
   height: 100%;
   width: 100%;
   font-size: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -12040,6 +12041,10 @@ body {
   font-family: "raleway";
   src: url("../fonts/Raleway-VariableFont_wght.ttf");
 }
+/*
+.anim{
+animation: fadeAppear 2s ease-in-out 1s forwards;
+}*/
 /*********************HEADER**************************/
 header {
   background-color: #EDFFAF;
@@ -13259,6 +13264,7 @@ footer .credits {
   margin-top: -40vh;
   background-color: #fff;
   border-radius: 5rem;
+  padding-bottom: 12rem;
 }
 
 .ecolieu h2, .ecolieu .h2 {
@@ -13294,6 +13300,148 @@ footer .credits {
   font-size: 1.2rem;
 }
 
+.medoc-top {
+  height: calc(100vh - 140px);
+  background-size: cover;
+  background-position: top;
+}
+
+.medoc {
+  margin-top: -40vh;
+  background-color: #fff;
+  border-radius: 5rem;
+  padding-bottom: 5rem;
+  z-index: 9;
+}
+
+.cartemedoc {
+  margin-top: -8rem;
+  overflow: hidden;
+  background-color: #D1EFFF;
+  position: relative;
+}
+
+.cartemedoc .box {
+  box-shadow: 6px 6px 40px rgba(0, 0, 0, 0.1607843137);
+  font-family: raleway;
+  color: #A0C622;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-color: #fff;
+  padding: 4vw;
+  text-align: center;
+  /*position: relative;
+  right: 50px;
+  top: 50px;*/
+  position: absolute;
+  top: 200px;
+  left: -25vw;
+  width: 25vw;
+}
+
+/*
+.cartemedoc .box img{
+    position: absolute; 
+    top: 200px; 
+    left: -25vw; 
+    width: 25vw; 
+}*/
+.cartemedoc .box img {
+  position: absolute;
+  bottom: -70px;
+  left: -70px;
+}
+
+.image {
+  position: relative;
+  width: 100%; /* for IE 6 */
+}
+
+.cartemedoc .imgcarte {
+  margin-top: -1rem;
+}
+
+.commentvenir h2, .commentvenir .h2 {
+  color: #3FA535;
+  font-family: "Futura", Arial, sans-serif;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  padding-top: 2rem;
+  position: relative;
+  z-index: 1;
+  line-height: 3.8rem;
+}
+
+.commentvenir .soustitre {
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  font-family: oliver;
+  color: #ffffff;
+  font-size: 1.8rem;
+  background-color: #9DC41A;
+  rotate: -4deg;
+  margin-left: 20%;
+  margin-top: -1.1rem;
+  padding: 0.2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.question {
+  position: relative;
+  bottom: -25px;
+  right: 0px;
+}
+
+.commentvenir p {
+  font-family: raleway;
+  color: #3FA535;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.soustitretransport {
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  font-family: oliver;
+  color: #ffffff;
+  font-size: 1.9rem;
+  background-color: #9DC41A;
+  rotate: -7deg;
+  margin-top: -1.1rem;
+  padding: 0.2rem;
+}
+
+.ligne {
+  background-image: url(../img/ligne.png);
+  background-repeat: repeat-x;
+  background-position: center;
+}
+
+.textetransport {
+  font-family: raleway;
+  font-weight: 600;
+  color: #A0C622;
+  font-size: 1.2rem;
+}
+
+.btn-calcul {
+  background: #9DC41A 0% 0% no-repeat padding-box;
+  font-size: 1.4rem !important;
+  padding: 0.8rem !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+  line-height: 1rem !important;
+}
+
+.btn-calcul span {
+  font-family: raleway;
+  font-size: 0.8rem;
+  line-height: 1rem !important;
+}
+
 @media (max-width: 1500px) {
   .navbar {
     background-color: #9DC41A;
@@ -13311,8 +13459,14 @@ footer .credits {
     padding-left: 5%;
     padding-right: 5%;
   }
+  .cartemedoc .box {
+    display: none;
+  }
 }
 @media (max-width: 992px) {
+  html {
+    font-size: 90%;
+  }
   .test-sejours {
     margin-bottom: 1rem;
   }
@@ -13322,6 +13476,19 @@ footer .credits {
   .swiper-button-prev, .swiper-button-next {
     display: none !important;
   }
+  /*
+      .soustitretransport{
+          position: relative;
+          z-index: 0;
+          display: inline-block;
+          font-family: oliver;
+          color: $blanc;
+          font-size: 1.5rem;
+          background-color: $vertprincipal;
+          rotate: -7deg;
+          margin-top: -1.1rem;
+          padding: 0.2rem;
+      }*/
 }
 @media (max-width: 767px) {
   /* h1, h2 {

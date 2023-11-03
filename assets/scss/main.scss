@@ -810,6 +810,9 @@ color: inherit;
     font-family: futurademi;
     color: $verttexte;
     font-size: 1rem;
+}
+
+.description strong{
     text-transform: uppercase;
     letter-spacing: 0.14px;
 }
@@ -1168,12 +1171,17 @@ color: inherit;
 }
 
 .description{
-    font-family: futurademi;
+    font-family: raleway;
     color: $verttexte;
     font-size: 1rem;
+}
+
+.description strong{
+    font-family: futurademi;
     text-transform: uppercase;
     letter-spacing: 0.14px;
 }
+
 
 .details-habitats{
     color: $vertprincipal;
@@ -1605,7 +1613,7 @@ footer .credits{
     //padding-right: 0.3rem;
 }
 
-.ligne{
+.lignetransport{
     background-image:url(../img/ligne.png);
     background-repeat: repeat-x;
     background-position: center;
@@ -1638,9 +1646,449 @@ footer .credits{
 
 }
 
+/////////////////PAGE HABITATS///////////////
+
+.pagehabitats, .pagesejours{
+    margin-top: -40vh;
+    background-color: #fff;
+    border-radius: 5rem;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    //padding-bottom: 12rem;
+    //width: 90%;
+    //margin-right: 10%;
+    //margin-left: 10%;
+}
+/*
+.pagesejourscontent{
+    margin-top: 0;
+}*/
+
+
+.pagehabitats h2{
+    color: #FF6F44;
+    font-family: 'Futura', Arial, sans-serif;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    padding-top: 2rem;
+    position: relative;
+    z-index: 1;
+    line-height: 3.8rem;
+}
+
+
+.pagehabitats .soustitre{
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    font-family: oliver;
+    color: $blanc;
+    font-size: 1.5rem;
+    background-color: #FF9900;
+    rotate: -4deg;
+    margin-left: 25%;
+    margin-top: -1.2rem;
+    padding: 0.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.pagehabitats p{
+    font-family: raleway;
+    color: #FF9900;
+    font-size: 1.2rem;
+}
+
+
+.container_habitats {
+    //width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 1rem;
+    padding: 3rem;
+    padding-bottom: 2rem;
+
+}
+
+
+
+.boxhabitat {
+    background: #fff;
+    margin-left: 5px;
+    box-shadow: 6px 6px 30px #00000029;
+    position: relative;
+    //border-radius: 8px;
+    /*overflow: hidden;
+    height: 400px !important;
+    min-height: 384px !important;
+    max-height: 400px !important;*/
+}
+
+.boxhabitat h4 {
+    font-size: 24px;
+}
+
+
+
+.boxhabitat .entry-more {
+    display: none;
+}
+
+
+.boxhabitat .post-categories li {
+    padding-left: 0 !important;
+    background-color: transparent !important;
+}
+
+.boxhabitat .post-categories a {
+    font-size: 10px !important;
+    color: #455775 !important;
+}
+
+
+.container_habitats .arrow-top {
+    width: 0%; 
+    height: 0; 
+    border-left: 25px solid $orangeclair; 
+    border-right: 0px solid transparent;
+    border-bottom: 35px solid transparent;
+    background-color: transparent!important;
+  }
+
+  .container_habitats .arrow-bot {
+    width: 0%; 
+    height: 0; 
+    border-left: 25px solid $orangeclair; 
+    border-right: 0px solid transparent;
+    border-top: 35px solid transparent;
+    background-color: transparent!important;
+    margin-left: -25px;
+    margin-top: 35px;
+  }
+
+  .container_habitats .arrow-upright {
+    width: 0%; 
+    height: 0; 
+    border-left: 0px solid transparent; 
+    border-right: 5px solid $orange;
+    border-bottom: 5px solid transparent;
+    background-color: transparent!important;
+    margin-left: -5px;
+  }
+  
+
+  .container_habitats .meta-category a{
+    background-color: $orange;
+}
+
+
+.seminaires{
+    height: 80vh;
+    background-size: cover;
+    background-position: center; 
+    background-image: url(../img/ecolieu/seminaires.jpg);
+    display: flex;
+    align-items: center;
+    //justify-items: center;
+    text-align: center;
+    color:$blanc;
+    font-size: 1.7rem;
+}
+
+
+/////////////////PAGE SEJOURS///////////////
+
+.pagesejours h2{
+    color: $verttexte;
+    font-family: 'Futura', Arial, sans-serif;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    padding-top: 2rem;
+    position: relative;
+    z-index: 1;
+    line-height: 3.8rem;
+}
+
+
+
+.pagesejours .soustitre{
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    font-family: oliver;
+    color: $blanc;
+    font-size: 1.5rem;
+    background-color: $vertprincipal;
+    rotate: -4deg;
+    margin-left: 25%;
+    margin-top: -1.2rem;
+    padding: 0.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.pagesejours p{
+    font-family: raleway;
+    color: $verttexte;
+    font-size: 1.2rem;
+}
+
+
+.container_sejours {
+    //width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 1rem;
+    padding: 3rem;
+    padding-bottom: 2rem;
+
+}
+
+
+
+.boxsejour {
+    background: #fff;
+    margin-left: 5px;
+    box-shadow: 6px 6px 30px #00000029;
+    position: relative;
+    //border-radius: 8px;
+    /*overflow: hidden;
+    height: 400px !important;
+    min-height: 384px !important;
+    max-height: 400px !important;*/
+}
+
+.boxsejour h4 {
+    font-size: 24px;
+}
+
+
+
+.boxsejour .entry-more {
+    display: none;
+}
+
+
+.boxsejour .post-categories li {
+    padding-left: 0 !important;
+    background-color: transparent !important;
+}
+
+.boxsejour .post-categories a {
+    font-size: 10px !important;
+    color: #455775 !important;
+}
+
+
+
+/////////////////FICHE ECOHABITAT///////////////
+
+.container-titre-sejours.page{
+    position: relative;
+    margin-top: -100px;
+    display: flex;
+    height: auto;
+   //height: 70px;
+}
+/*
+.p15{
+    padding-left: 15%;
+    padding-right: 15%;
+}
+*/
+
+
+
+.titrepagesejour{
+    //margin-top: -40vh;
+    //background-color: $orangeecohabitat;
+    //background-color: rgba(216,130,81,0.25);
+    background-color: #FEFFEB;
+    //color: $orangeecohabitat;
+    //color: $vertprincipal;
+    color: $vertfond;
+    font-family: futura;
+
+    //min-height: 15vh;
+    //max-width: 90%;
+    //margin: auto,
+    //margin-left: auto;
+    //margin-right: auto;
+
+}
+
+
+
+
+.imgfamille{
+    width: 80px;
+}
+
+.bande-titre-sejours.ecohabitat{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+
+.bande-titre-sejours.ecohabitat h1{
+    margin-top: 0;
+    font-family: futura;
+}
+
+.ecohabitat, .ecohabitat h1{
+    //background-color: $orangeecohabitat;
+    color: $blanc;
+    font-size: 2rem;
+}
+
+.ecohabitat h1{
+    font-size: 4.5rem;
+}
+
+.duree{
+    font-size: 2rem;
+}
+
+.nb{
+    font-size: 3rem;
+    line-height: 2.2rem;
+}
+
+.jours{
+    font-size: 1.5rem;
+}
+
+/*
+.arrow-top.ecohabitat{
+    border-left: 25px solid $orangeecohabitat; 
+    
+}*/
+
+.arrow-top.ecohabitat{
+    border-left: 65px solid $vertprincipal; //$orangeecohabitat; 
+    border-bottom: 100px solid transparent; 
+    margin-left: 0px;
+    
+}
+
+.arrow-bot.ecohabitat{
+    border-left: 65px solid $vertprincipal; //$orangeecohabitat; 
+    border-top: 100px solid transparent;
+    margin-top: 100px;
+    margin-left: -65px;
+    
+}
+
+
+.titrepagesejour, .presentation, .hebergements, .avantages, .programme, .enimages, .infospratiques, .detailsduprix{
+    background-color: $blanc;
+    //min-height: 50vh;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.presentation h2, .hebergements h2, .programme h2, .enimages h2, .infospratiques h2, .detailsduprix h2{
+    font-family: futura;
+    font-size: 3rem;
+    color: $verttexte;
+}
+
+
+.avantages{
+background-color: $verttexte;
+}
+
+.avantages h2{
+    font-family: futura;
+    font-size: 3rem;
+    color: $blanc;
+}
+
+/*
+.description{
+    text-align: justify;
+}*/
+
+
+.jour{
+    background-color: $vertfond;
+    border-radius: 28px;
+    border: none;
+    font-family: futura;
+    font-size: 1.5rem;
+    letter-spacing: 0px;
+    color: $blanc;
+    //line-height: 1.5rem;
+    padding: 1.5rem;
+    padding-bottom: .5rem;
+    padding-top: .5rem;
+    //transform: translate(0,0);
+    //transition: transform ease-in .08s;
+}
+
+.ligneprogramme{
+    background-image:url(../img/ligneverti.png);
+    background-repeat: repeat-y;
+    background-position: center;
+    text-align: center;
+}
+
+.aprem{
+    font-family: futura;
+    color: $vertfond;
+}
+
+.img-telecharger{
+    rotate: 90deg;
+}
+
+
+.cta-main button.btn-telecharger{
+    color:$verttexte;
+    border-color: $verttexte;
+    background-color: $blanc;
+    //border-radius: 28px;
+    border: 2px solid;
+    font-family: futura;
+    font-size: 1.5rem;
+    letter-spacing: 0px;
+    //line-height: 1.5rem;
+    //padding: 1.5rem;
+    //padding-bottom: .5rem;
+    //padding-top: .5rem;
+}
+
+.avantagestxt{
+    font-family: raleway;
+    color: $blanc;
+}
+
+.detailsduprix h3{
+ color: $verttexte;
+ font-size: 2rem;
+ font-family: futura;
+}
+
+.listsmile{
+    list-style-type: none;
+}
+
 
 ///////////////////RESPONSIVE//////////////////
 
+
+@media (min-width: 1500px) {
+
+    .ecolieu, .pagehabitats,.pagesejours{
+       // margin-top: -25vh;
+       max-width: 90%;
+
+    }
+}
 
 @media (max-width: 1500px) {
     .navbar{
@@ -1653,6 +2101,18 @@ footer .credits{
         padding-left: 8%;
         padding-right: 8%;
     }
+
+    .ecolieu, .pagehabitats,.pagesejours{
+        margin-top: -25vh;
+        max-width: 95%;
+
+    }
+
+    .titrepagesejour, .presentation, .hebergements, .avantages, .programme, .enimages, .infospratiques, .detailsduprix{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
 }
 
 @media (max-width: 1200px) {
@@ -1666,6 +2126,16 @@ footer .credits{
         display: none;
     }
 
+    
+    .ecolieu, .pagehabitats,.pagesejours{
+        margin-top: -25vh;
+        max-width: 100%;
+
+    }
+
+
+
+
 }
 
 
@@ -1673,6 +2143,12 @@ footer .credits{
  
 html{
     font-size: 90%;
+}
+
+.ecolieu, .pagehabitats,.pagesejours{
+    margin-top: -20vh;
+   
+
 }
 
     .test-sejours{
@@ -1687,6 +2163,10 @@ html{
 
     .swiper-button-prev, .swiper-button-next{
         display: none!important
+    }
+
+    .boncadeau{
+        display: none;
     }
 
 /*
@@ -1727,6 +2207,9 @@ html{
     html {
         font-size: 85%;
         }
+
+
+
 }
 
 
